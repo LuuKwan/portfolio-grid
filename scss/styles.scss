@@ -1,0 +1,132 @@
+@import 'config';
+
+
+
+
+body{
+   background-color: $card-light-gray;
+}
+
+.container{
+   font-family: $text-font;
+   box-sizing: border-box;
+   height: 100%;
+   margin: 3% 10%;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-gap:  10px;
+   grid-template-rows: auto auto;
+   grid-template-areas:
+    "dani dani jonathan kira"
+    "jean patrick patrick kira";
+
+    
+
+   .container-item{
+      border-radius: 20px;
+      padding: 5% 5%;
+      color: $text-clr;
+      img{
+         position: relative;
+         top: 10px;
+         margin-right: 10px;
+         border-radius: 50%;
+      }
+      h1{
+         font-weight: 600;
+      }
+      h3{
+         display: inline-block;
+         font-weight: 500;
+      }
+      h3::after{
+         display: flex;
+         flex-direction: column;
+         content: "Verified Graduate";
+         opacity: 50%;
+      }
+      p{
+         opacity: 70%;
+      }
+   }
+   
+   .container-item:nth-child(1){
+      background-image: url('/images/bg-pattern-quotation.svg');
+      background-repeat: no-repeat;
+      background-position: top right 2rem;
+      background-size: 30%;
+       grid-area: dani;
+       background-color: $card-violet;
+   }
+   .container-item:nth-child(2){
+      grid-area: jonathan;
+      background-color: $card-gray-blue;
+   }
+   .container-item:nth-child(3){
+      grid-area: kira;
+      background-color:  $card-white;
+      color: darken($color: $text-clr, $amount: 60%);
+
+   }
+   .container-item:nth-child(4){
+      grid-area: jean;
+      background-color:  $card-white;
+      color: darken($color: $text-clr, $amount: 60%);
+     
+   }
+   .container-item:nth-child(5){
+      img{
+         border: solid 2px $card-violet;
+      }
+      grid-area: patrick;
+      background-color: $card-black-blue;
+   }
+}
+
+
+@include device-md{
+   .container{
+      margin: 0 2%;
+      .container-item{
+         h1{
+            font-size: 1rem;
+         }
+         h3{
+            font-size: 0.9rem;
+         }
+         p{
+            font-size: 0.75rem;
+         }
+      }
+   }
+   
+}
+
+@include device-sm{
+   .container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &-item{
+         img{
+            position: relative;
+            width: 10vw;
+         }
+         h1{
+            font-size: 0.9rem;
+         }
+         h3{
+            font-size: 0.8rem;
+         }
+         p{
+            font-size: 0.7rem;
+            line-height: 1.5;
+         }
+      }
+      .container-item:nth-child(3){
+         order: 1;
+      }
+   }
+}
+

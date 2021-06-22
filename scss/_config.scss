@@ -1,0 +1,27 @@
+$card-violet: hsl(263, 55%, 52%);
+$card-gray-blue:hsl(217, 19%, 35%);
+$card-black-blue: hsl(219, 29%, 14%);
+$card-light-gray:  hsl(0, 0%, 81%);
+$card-white: white;
+$card-gray-fish-blue:hsl(210, 46%, 95%);
+
+$text-clr:white;
+
+$text-font: 'Barlow Semi Condensed', sans-serif;
+
+
+@mixin device-md {
+   @media screen and (min-width: 668px) and (max-width:1024px) {
+      @content;
+      
+   }
+}
+
+@mixin device-sm {
+   @media screen and (max-width:667px) {
+      @content;
+   }
+}
+
+
+
