@@ -15,7 +15,8 @@ body {
   grid-gap: 10px;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: "dani dani jonathan kira" "jean patrick patrick kira";
+      grid-template-areas: "dani dani jonathan kira"
+ "jean patrick patrick kira";
 }
 
 .container .container-item {
@@ -57,7 +58,7 @@ body {
 }
 
 .container .container-item:nth-child(1) {
-  background-image: url("/images/bg-pattern-quotation.svg");
+  background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 2rem;
   background-size: 30%;
